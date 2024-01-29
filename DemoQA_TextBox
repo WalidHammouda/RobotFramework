@@ -1,0 +1,18 @@
+*** Settings ***
+library     SeleniumLibrary
+
+*** Variables ***
+${url}   https://demoqa.com/text-box
+${navigateur}   Edge
+
+*** Test Cases ***
+TestCase1_TextBox
+    Open Browser    ${url}      ${navigateur}
+    Sleep   5s
+    
+    Input Text  id=userName    Walid Hammouda
+    Input Text  id=userEmail    Hammoudawalid@gmail.com
+    Input Text  id=currentAddress   Casablanca Greentown
+    Input Text  id=permanentAddress   Casablanca Greentown Permanent
+
+    Sleep   60s
